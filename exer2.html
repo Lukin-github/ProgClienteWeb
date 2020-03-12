@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Java</title>
+	<meta charset="utf-8">
+	<script type="text/javascript">
+		function numPrimo() {
+			var num = document.getElementById("numero").value;
+			if (num == 1 || num == 2 || num == 3)
+				resultado = "O número "+num+" é primo.";
+			else
+				for (var i = 2; i < num; i++)
+					if (num%i==0){
+						resultado = "O número "+num+" não é primo.";
+						i=num;
+					}
+					else
+						resultado = "O número "+num+" é primo.";
+			document.getElementById("resultado").innerHTML = resultado;
+		}
+	</script>
+</head>
+<body>
+	<input id="numero">
+	<button onclick="numPrimo()">Calcular</button>
+  	<h1 id="resultado"></h1>
+</body>
+</html>

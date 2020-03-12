@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Java</title>
+	<meta charset="utf-8">
+	<script type="text/javascript">
+    function fibonacci(){
+      var x=0;
+      var y=1;
+      var z;
+
+      for(var i = 0; i < document.getElementById("numero").value; i++){
+        z = x + y;
+        x = y;
+        y = z;
+      }
+      var result = x+y;
+      document.getElementById("resultado").innerHTML = x+"+"+y+"="+result;
+    }
+  </script>
+
+</head>
+<body>
+	<input id="numero">
+	<button onclick="javascript:fibonacci()">Calcular</button>
+  	<h1 id="resultado">O num da sequência de fibonacci é [].</h1>
+</body>
+</html>
